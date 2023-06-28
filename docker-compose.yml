@@ -1,0 +1,34 @@
+version: "3.7"
+
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: shayon
+      POSTGRES_PASSWORD: shayon
+      POSTGRES_DB: travel
+    ports:
+      - 5432:5432
+
+  migrate:
+    build: .
+    image: server
+    command: crystal sam.cr db:migrate
+    working_dir: /travel_plan
+    environment:
+      DATABASE_URL: postgres://shayon:shayon@db:5432/travel
+    depends_on:
+      - db
+
+  web:
+    build: .
+    image: server
+    command: crystal run src/server.cr 
+    working_dir: /travel_plan
+    environment:
+      DATABASE_URL: postgres://shayon:shayon@db:5432/travel
+    ports: 
+      - 3000:3000
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
