@@ -1,8 +1,8 @@
-# multiverse_travels_booker
+# Multiverse Travels Booker
 
 [![Built with Crystal](https://img.shields.io/badge/built%20with-crystal-000000.svg?style=flat-square)](https://crystal-lang.org/)
 
-REST API example [Kemal](https://kemalcr.com/) to plan travels in Rick and Morty's Multiverse
+REST API [Kemal](https://kemalcr.com/) to plan travels in Rick and Morty's Multiverse
 
 ## Features
 
@@ -21,7 +21,7 @@ REST API example [Kemal](https://kemalcr.com/) to plan travels in Rick and Morty
 ## Usage
 
  - To run runtest: run twice
-  - host in database.yml must be db
+  - Host in database.yml must be db
   - In first try it will give: service "migrate" didn't complete successfully: exit 1
   - In second try it will execute succesfully!
 
