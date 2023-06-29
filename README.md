@@ -18,15 +18,6 @@ REST API [Kemal](https://kemalcr.com/) to plan travels in Rick and Morty's Multi
  - Run make sam db:migrate
  - Create and full fill database.yml -> WARN: host must be db to work with docker compose and to run runtest
 
-## Usage
-
- - To run runtest: run twice
-  - Host in database.yml must be db
-  - In first try it will give: service "migrate" didn't complete successfully: exit 1
-  - In second try it will execute succesfully!
-
- - To run server locally its need to create database.yml in config folder following database.example.yml
-
 ## Endpoints
 
 | HTTP Method | Path                            | Description                                                     |
