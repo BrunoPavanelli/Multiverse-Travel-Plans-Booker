@@ -16,7 +16,7 @@ REST API [Kemal](https://kemalcr.com/) to plan travels in Rick and Morty's Multi
  - Run shards install
  - Run make sam db:create
  - Run make sam db:migrate
- - Create and full fill database.yml -> WARN: host must be db to work with docker compose and to run runtest
+ - Create and full fill database.yml -> WARN: host must be db to work with docker compose.
 
 ## Endpoints
 
